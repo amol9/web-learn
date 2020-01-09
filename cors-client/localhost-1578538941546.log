@@ -1,0 +1,5 @@
+
+(index):1 Access to XMLHttpRequest at 'http://localhost:8000/data.json' from origin 'http://localhost:8080' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.
+(index):7 [Violation] 'readystatechange' handler took 4048ms
+(index):15 Cross-Origin Read Blocking (CORB) blocked cross-origin response http://localhost:8000/data.json with MIME type application/json. See https://www.chromestatus.com/feature/5629709824032768 for more details.
+(anonymous) @ (index):15

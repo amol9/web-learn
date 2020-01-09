@@ -1,0 +1,17 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            const xhr = new XMLHttpRequest()
+            const url = "http://localhost:8000/data.json"
+
+            xhr.open('GET', url)
+            xhr.onreadystatechange = function() {
+                console.log(xhr.responseText)
+            }
+            xhr.send()
+        </script>
+    </body>
+</html>
