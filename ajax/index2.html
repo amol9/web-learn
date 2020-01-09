@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        const xhr = new XMLHttpRequest()
+        const url = "http://localhost:8000/array.json"
+
+        xhr.open('GET', url)
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                var obj = JSON.parse(xhr.responseText)
+
+                var table = document.getElementById("result")
+
+                var delay = 300
+
+                obj.top.forEach(item => {
+                    setTimeout(function () {
+                        var tr = table.insertRow()
+                        var td = tr.insertCell(0)
+                        td.innerHTML = item[0]
+                        var td2 = tr.insertCell(1)
+                        td2.innerHTML = item[1]
+                    }, delay)
+                    delay += 300
+                });
+
+            }
+        }
+        xhr.send()
+    </script>
+
+    <table id="result"></table>
+</body>
+
+</html>
